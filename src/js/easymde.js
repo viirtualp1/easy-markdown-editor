@@ -1326,13 +1326,6 @@ function _toggleBlock(editor, type, start_chars, end_chars) {
         } else if (type == 'italic') {
             start = start.replace(/(\*\*|__)(?![\s\S]*(\*\*|__))/, '');
             end = end.replace(/(\*\*|__)/, '');
-
-            const selectedLine = CodeMirror.getCursor().line;
-            const line = document.querySelectorAll('.CodeMirror-line')[selectedLine];
-            const strongWords = line.querySelectorAll('cm-strong');
-            strongWords.forEach(() => {
-                strongWords.className = 'cm-em';
-            });
         } else if (type == 'strikethrough') {
             start = start.replace(/(\*\*|~~)(?![\s\S]*(\*\*|~~))/, '');
             end = end.replace(/(\*\*|~~)/, '');
@@ -1372,6 +1365,9 @@ function _toggleBlock(editor, type, start_chars, end_chars) {
     }
 
     cm.setSelection(startPoint, endPoint);
+    cm.markText(startPoint, endPoint, {
+        className: 'cm-em',
+    });
     cm.focus();
 }
 
