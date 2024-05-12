@@ -1,49 +1,13 @@
-# EasyMDE - Markdown Editor
+# @taigacrm/EasyMDE - Telegram Markdown Editor
 
-[![npm version](https://img.shields.io/npm/v/easymde.svg?style=for-the-badge)](https://www.npmjs.com/package/easymde)
-[![npm version](https://img.shields.io/npm/v/easymde/next.svg?style=for-the-badge)](https://www.npmjs.com/package/easymde/v/next)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/ionaru/easy-markdown-editor/cd.yaml?branch=master&style=for-the-badge)](https://github.com/Ionaru/easy-markdown-editor/actions?query=branch%3Amaster)
+[![npm version](https://img.shields.io/npm/v/easymde.svg?style=for-the-badge)](https://www.npmjs.com/package/@taigacrm/easymde)
 
-> This repository is a fork of
-[SimpleMDE, made by Sparksuite](https://github.com/sparksuite/simplemde-markdown-editor/).
-Go to the [dedicated section](#simplemde-fork) for more information.
+> This repository is a fork of [EasyMDE](), made by Lonaru.
+ 
+The package is designed to format text in a Telegram.
 
-A drop-in JavaScript text area replacement for writing beautiful and understandable Markdown.
-EasyMDE allows users who may be less experienced with Markdown to use familiar toolbar buttons and shortcuts.
-
-In addition, the syntax is rendered while editing to clearly show the expected result. Headings are larger, emphasized words are italicized, links are underlined, etc.
-
-EasyMDE also features both built-in auto saving and spell checking.
-The editor is entirely customizable, from theming to toolbar buttons and javascript hooks.
-
-[**Try the demo**](https://stackblitz.com/edit/easymde/)
 
 [![Preview](https://user-images.githubusercontent.com/3472373/51319377-26fe6e00-1a5d-11e9-8cc6-3137a566796d.png)](https://stackblitz.com/edit/easymde/)
-
-
-## Quick access
-
-- [EasyMDE - Markdown Editor](#easymde---markdown-editor)
-  - [Quick access](#quick-access)
-  - [Install EasyMDE](#install-easymde)
-  - [How to use](#how-to-use)
-    - [Loading the editor](#loading-the-editor)
-    - [Editor functions](#editor-functions)
-  - [Configuration](#configuration)
-    - [Options list](#options-list)
-    - [Options example](#options-example)
-    - [Toolbar icons](#toolbar-icons)
-    - [Toolbar customization](#toolbar-customization)
-    - [Keyboard shortcuts](#keyboard-shortcuts)
-  - [Advanced use](#advanced-use)
-    - [Event handling](#event-handling)
-    - [Removing EasyMDE from text area](#removing-easymde-from-text-area)
-    - [Useful methods](#useful-methods)
-  - [How it works](#how-it-works)
-  - [SimpleMDE fork](#simplemde-fork)
-  - [Hacking EasyMDE](#hacking-easymde)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 
 ## Install EasyMDE
@@ -51,20 +15,7 @@ The editor is entirely customizable, from theming to toolbar buttons and javascr
 Via [npm](https://www.npmjs.com/package/easymde):
 
 ```
-npm install easymde
-```
-
-Via the *UNPKG* CDN:
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
-<script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
-```
-
-Or *jsDelivr*:
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
-<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+npm install @taigacrm/easymde
 ```
 
 ## How to use
@@ -235,8 +186,8 @@ const editor = new EasyMDE({
         text: "Autosaved: "
     },
     blockStyles: {
-        bold: "__",
-        italic: "_",
+        bold: "**",
+        italic: "__",
     },
     unorderedListStyle: "-",
     element: document.getElementById("MyID"),
