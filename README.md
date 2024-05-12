@@ -74,9 +74,9 @@ easyMDE.value('New input for **EasyMDE**');
   - **text**: Set text for autosave.
 - **autoRefresh**: Useful, when initializing the editor in a hidden DOM node. If set to `{ delay: 300 }`, it will check every 300 ms if the editor is visible and if positive, call CodeMirror's [`refresh()`](https://codemirror.net/doc/manual.html#refresh).
 - **blockStyles**: Customize how certain buttons that style blocks of text behave.
-  - **bold**: Can be set to `**` or `__`. Defaults to `**`.
+  - **bold**: Can be set to `**`.
   - **code**: Can be set to  ```` ``` ```` or `~~~`.  Defaults to ```` ``` ````.
-  - **italic**: Can be set to `*` or `_`. Defaults to `*`.
+  - **italic**: Can be set to `__`. 
 - **unorderedListStyle**: can be `*`, `-` or `+`. Defaults to `*`.
 - **scrollbarStyle**: Chooses a scrollbar implementation. The default is "native", showing native scrollbars. The core library also provides the "null" style, which completely hides the scrollbars. Addons can implement additional scrollbar models.
 - **element**: The DOM element for the `textarea` element to use. Defaults to the first `textarea` element on the page.
