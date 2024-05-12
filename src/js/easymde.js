@@ -1365,9 +1365,13 @@ function _toggleBlock(editor, type, start_chars, end_chars) {
     }
 
     cm.setSelection(startPoint, endPoint);
-    cm.markText(startPoint, endPoint, {
-        className: 'cm-em',
-    });
+
+    if (type == 'italic') {
+        cm.markText(startPoint, endPoint, {
+            className: 'cm-em',
+        });
+    }
+
     cm.focus();
 }
 

@@ -1,6 +1,6 @@
 {
     "name": "@taigacrm/easymde",
-    "version": "2.20.5",
+    "version": "2.20.6",
     "description": "A simple, beautiful, and embeddable JavaScript Markdown editor that easy to use. Features include autosaving and spell checking.",
     "files": [
         "dist/**/*",
