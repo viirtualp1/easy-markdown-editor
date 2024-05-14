@@ -1,6 +1,6 @@
 {
     "name": "@taigacrm/easymde",
-    "version": "2.20.6",
+    "version": "2.20.7",
     "description": "EasyMDE: Telegram edition",
     "files": [
         "dist/**/*",
