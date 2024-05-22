@@ -1321,11 +1321,11 @@ function _toggleBlock(editor, type, start_chars, end_chars) {
         start = text.slice(0, startPoint.ch);
         end = text.slice(startPoint.ch);
         if (type == 'bold') {
-            start = start.replace('\*', '');
-            end = end.replace('*', '');
+            start = start.replace(/(\*|_)(?![\s\S]*(\*|_))/, '');
+            end = end.replace(/(\*|_)/, '');
         } else if (type == 'italic') {
-            start = start.replace('\*', '');
-            end = end.replace('_', '');
+            start = start.replace(/(\*\*|_)(?![\s\S]*(\*\*|__))/, '');
+            end = end.replace(/(\*\*|_)/, '');
         } else if (type == 'strikethrough') {
             start = start.replace(/(\*\*|~~)(?![\s\S]*(\*\*|~~))/, '');
             end = end.replace(/(\*\*|~~)/, '');
@@ -1352,9 +1352,9 @@ function _toggleBlock(editor, type, start_chars, end_chars) {
     } else {
         text = cm.getSelection();
         if (type == 'bold') {
-            text = text.split('\*').join('');
+            text = text.split('*').join('');
         } else if (type == 'italic') {
-            text = text.split('\_').join('');
+            text = text.split('_').join('');
         } else if (type == 'strikethrough') {
             text = text.split('~~').join('');
         }
